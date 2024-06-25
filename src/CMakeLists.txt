@@ -10,7 +10,12 @@ set(EPOLL_SHIM_SRC
     signalfd.c
     signalfd_ctx.c
     eventfd.c
+    upoll.c
     eventfd_ctx.c)
+
+if(MSYS)
+  add_definitions(-DMSYS=true)
+endif()
 
 if(APPLE)
   add_library(epoll-shim STATIC ${EPOLL_SHIM_SRC})

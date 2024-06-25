@@ -1,18 +1,18 @@
-#ifndef SIGNALFD_CTX_H_
-#define SIGNALFD_CTX_H_
+// #ifndef SIGNALFD_CTX_H_
+// #define SIGNALFD_CTX_H_
 
-#include <errno.h>
-#include <signal.h>
-#include <stdint.h>
-#include <stdlib.h>
+// #include <errno.h>
+// #include <signal.h>
+// #include <stdint.h>
+// #include <stdlib.h>
 
-typedef struct {
-	int kq; // non owning
-} SignalFDCtx;
+// typedef struct {
+// 	int kq; // non owning
+// } SignalFDCtx;
 
-errno_t signalfd_ctx_init(SignalFDCtx *signalfd, int kq, const sigset_t *sigs);
-errno_t signalfd_ctx_terminate(SignalFDCtx *signalfd);
+// errno_t signalfd_ctx_init(SignalFDCtx *signalfd, int kq, const sigset_t *sigs);
+// errno_t signalfd_ctx_terminate(SignalFDCtx *signalfd);
 
-errno_t signalfd_ctx_read(SignalFDCtx *signalfd, uint32_t *ident);
+// errno_t signalfd_ctx_read(SignalFDCtx *signalfd, uint32_t *ident);
 
-#endif
+// #endif
